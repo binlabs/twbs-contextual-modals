@@ -1,0 +1,28 @@
+/*!
+ * Contextual Modals
+ *
+ * A LESS mix-in for Twitter Bootstrap 3 that allows you to use the 
+ * five contextual styles you're used to using with alerts, button, 
+ * and labels to style modals. Add this file to your LESS directory, 
+ * then include this file when compiling bootstrap.less.
+ */
+ // Contextual variations
+// -------------------------
+.modal-default {
+  .modal-variant(@modal-default-bg; @modal-default-border; @modal-default-text; @modal-default-heading-bg);
+}
+.modal-primary {
+  .modal-variant(@modal-primary-bg; @modal-primary-border; @modal-primary-text; @modal-primary-heading-bg);
+}
+.modal-success {
+  .modal-variant(@modal-success-bg; @modal-success-border; @modal-success-text; @modal-success-heading-bg);
+}
+.modal-warning {
+  .modal-variant(@modal-warning-bg; @modal-warning-border; @modal-warning-text; @modal-warning-heading-bg);
+}
+.modal-danger {
+  .modal-variant(@modal-danger-bg; @modal-danger-border; @modal-danger-text; @modal-danger-heading-bg);
+}
+.modal-info {
+  .modal-variant(@modal-info-bg; @modal-info-border; @modal-info-text; @modal-info-heading-bg;);
+}
