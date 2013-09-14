@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Contextual Modal - a LESS mix-in for TWBS3</title>
     <!-- Include the latest minified Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/docs.css">
 </head>
 <body>
@@ -57,20 +57,16 @@
             <h3>LESS</h3>
             <p>Installing the Contextual Modal styles using the LESS mix-in makes it easier to customize to fit your theme's color scheme.</p>
             <ul>
-                <li>Download the <code>bootstrap-contextual-modal.less</code> file.</li>
-                <li>Move it to your LESS directory.</li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Download twbs-contextual-modals.</li>
+                <li>Move <code>bootstrap-contextual-modal.less</code> to your LESS directory.</li>
+                <li>Copy and paste the contents of <code>mixins.less</code> to your own <code>mixins.less</code> file.</li>
+                <li>Copy and paste the contents of <code>variables.less</code> to your own <code>variables.less</code> file, preferably near the existing lines of modal variables.</li>
             </ul>
             <h3>CSS</h3>
             <p>To install the contextual modal styles using just CSS, follow the instructions below.</p>
             <ul>
-                <li>Download the <code>bootstrap-contextual-modal.css</code> file.</li>
-                <li>Place it in your CSS directory, or copy the styles and paste them in to your <code>theme.css</code> file.</li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Download twbs-contextual-modals.</li>
+                <li>Move <code>bootstrap-contextual-modal.css</code> to your CSS directory or copy the styles and paste them in to your theme's stylesheet.</li>
             </ul>
         </div>
     </div>
@@ -78,7 +74,7 @@
 
     <!-- Include the core jQuery and Bootstrap JS -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <!-- Initialize modals -->
     <script>
     $(document).ready(function () {
