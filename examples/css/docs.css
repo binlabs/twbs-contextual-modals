@@ -3,6 +3,10 @@
  *
  * Styles for Contextual Modal Documentation
  */
+body {
+	padding-bottom: 70px;
+}
+
 .modal {
   bottom: auto;
   display: block;
@@ -12,6 +16,7 @@
   top: auto;
   z-index: 1;
 }
+
 /*!
  * Contextual Modal
  *
@@ -106,4 +111,10 @@
 }
 .modal-info .modal-content .modal-footer + .modal-collapse .modal-body {
   border-bottom-color: #bce8f1;
+}
+/* Style for the class highlighting in the pre element */ 
+pre code {
+    color: #C7254E;
+    padding: 1px;
+    white-space: nowrap;
 }

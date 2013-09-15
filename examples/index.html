@@ -1,20 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<meta name="author" content="Kurt Maine">
+	<meta name="description" content="A LESS mix-in for adding contextual styles to your modals using Twitter Bootstrap 3">
+	<meta name="keywords" content="modal styles,contextual modal styles,bootstrap modals">
     <meta charset="UTF-8">
     <title>Contextual Modal - a LESS mix-in for TWBS3</title>
     <!-- Include the latest minified Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<!-- Include the stylesheet for this example -->
     <link rel="stylesheet" type="text/css" href="css/docs.css">
 </head>
 <body>
 <div class="container">
     <h1 class="page-title">Contextual Modals <small>for Twitter Bootstrap 3</small></h1>
+	<p>The Contextual Modals LESS mix-in for <a href="https://github.com/twbs/bootstrap" title="twbs/bootstrap">Twitter Bootstrap 3</a> allow you to use the five contextual styles that you're used to having available for alerts, button, and labels to style your modals.</p>
     <div class="row">
         <div class="col-md-12">
             <h2>Example</h2>
             <p>An example modal styled by default with <code>.modal-danger</code>. You can preview the other contextual modal styles by toggling the appropriate button in the modal's footer.</p>
-            <div class="well well-lg">
+            <div class="well well-lg" name="example" id="example">
             <div class="modal modal-danger">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -48,6 +53,40 @@
                 </div><!-- /.modal-dialog -->
             </div><!-- /.modal -->
             </div><!-- /.well .well-lg -->
+			<h3>Markup</h3>
+			<p>The following block of code is the actual markup being used to style the modal in the example above.</p>
+			<pre name="markup" id="markup">&lt;div class=&quot;<code>modal modal-danger</code>&quot;&gt;
+	&lt;div class=&quot;modal-dialog&quot;&gt;
+		&lt;div class=&quot;modal-content&quot;&gt;
+			&lt;div class=&quot;modal-header&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;
+			&lt;h4 class=&quot;modal-title&quot;&gt;Error!&lt;/h4&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;modal-body&quot;&gt;
+				&lt;p&gt;This is an example of a modal being styled with the &lt;code&gt;.modal-danger&lt;/code&gt; class.&lt;/p&gt;
+			&lt;/div&gt;&lt;!-- /.modal-body --&gt;
+			&lt;div class=&quot;modal-footer&quot;&gt;
+				&lt;div class=&quot;btn-group btn-group-justified&quot; data-toggle=&quot;buttons&quot;&gt;
+					&lt;label class=&quot;btn btn-default&quot;&gt;
+						&lt;input type=&quot;radio&quot; name=&quot;modal-style&quot; id=&quot;modal-default&quot;&gt; Default
+					&lt;/label&gt;
+					&lt;label class=&quot;btn btn-primary&quot;&gt;
+						&lt;input type=&quot;radio&quot; name=&quot;modal-style&quot; id=&quot;modal-primary&quot;&gt; Primary
+					&lt;/label&gt;
+					&lt;label class=&quot;btn btn-danger&quot;&gt;
+						&lt;input type=&quot;radio&quot; name=&quot;modal-style&quot; id=&quot;modal-danger&quot;&gt; Danger
+					&lt;/label&gt;
+					&lt;label class=&quot;btn btn-warning&quot;&gt;
+						&lt;input type=&quot;radio&quot; name=&quot;modal-style&quot; id=&quot;modal-warning&quot;&gt; Warning
+					&lt;/label&gt;
+					&lt;label class=&quot;btn btn-info&quot;&gt;
+						&lt;input type=&quot;radio&quot; name=&quot;modal-style&quot; id=&quot;modal-info&quot;&gt; Info
+					&lt;/label&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;&lt;!-- /.modal-footer --&gt;
+		&lt;/div&gt;&lt;!-- /.modal-content --&gt;
+	&lt;/div&gt;&lt;!-- /.modal-dialog --&gt;
+&lt;/div&gt;&lt;!-- /.modal --&gt;</pre>
         </div><!-- /.col-md-12 -->
     </div><!-- /.row -->
     <div class="row">
@@ -56,22 +95,38 @@
             <p>There are two ways to install the contextual modal styles for Twitter Bootstrap 3. The first method uses the LESS mix-in, and the second simply uses the CSS file.</p>
             <h3>LESS</h3>
             <p>Installing the Contextual Modal styles using the LESS mix-in makes it easier to customize to fit your theme's color scheme.</p>
-            <ul>
+            <ol>
                 <li>Download twbs-contextual-modals.</li>
                 <li>Move <code>bootstrap-contextual-modal.less</code> to your LESS directory.</li>
                 <li>Copy and paste the contents of <code>mixins.less</code> to your own <code>mixins.less</code> file.</li>
                 <li>Copy and paste the contents of <code>variables.less</code> to your own <code>variables.less</code> file, preferably near the existing lines of modal variables.</li>
-            </ul>
+				<li>Compile your theme.</li>
+				<li>Initiate a modal using the <code>.modal</code> class and the class of the contextual style you want to use, such as <code>.modal-danger.</code></li>
+            </ol>
             <h3>CSS</h3>
             <p>To install the contextual modal styles using just CSS, follow the instructions below.</p>
-            <ul>
+            <ol>
                 <li>Download twbs-contextual-modals.</li>
                 <li>Move <code>bootstrap-contextual-modal.css</code> to your CSS directory or copy the styles and paste them in to your theme's stylesheet.</li>
-            </ul>
+				<li>Initiate a modal using the <code>.modal</code> class and the class of the contextual style you want to use, such as <code>.modal-danger.</code></li>
+            </ol>
         </div>
     </div>
 </div><!-- /.container -->
-
+<footer class="nav navbar-inverse navbar-fixed-bottom">
+<div class="container">
+<div class="navbar-header">
+<a href="https://github.com/binlabs/twbs-contextual-modals" class="navbar-brand">twbw-contextual-modals</a>
+</div>
+<ul class="nav navbar-nav">
+	<li><a href="#example" title="Example Modal using styles from Contextual Modals">Example</a></li>
+	<li><a href="#markup" title="Contextual Modals Markup">Markup</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="https://github.com/binlabs/twbs-contextual-modals/" title="Download Contextual Modals for Twitter Bootstrap 3">Download on GitHub</a></li>
+</ul>
+</div>
+</footer>
     <!-- Include the core jQuery and Bootstrap JS -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
@@ -105,7 +160,11 @@
                 .html(modalText)
                 .parents('.modal')
                 .find('code')
-                .html('.' + style);
+                .html('.' + style)
+			;
+			$('pre code')
+				.html('modal ' + style)
+			;
         });
     });
     </script>
