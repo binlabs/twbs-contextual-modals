@@ -1,7 +1,7 @@
-twbs-contextual-modal
+twbs-contextual-modals
 =====================
 
-Contextual Modal is a LESS mix-in for [Twitter Bootstrap 3](https://github.com/twbs/bootstrap) that allows you to use the five contextual styles you're used to using with alerts, button, and labels to style modals.
+The Contextual Modals LESS mix-in for [Twitter Bootstrap 3](https://github.com/twbs/bootstrap) allow you to use the five contextual styles that you're used to having available for alerts, button, and labels to style your modals.
 ## Examples
 In addition to the screenshots below, you can view the contextual modal styles by cloning this repository and opening <code>index.html</code> from the examples directory in your browser.
 
